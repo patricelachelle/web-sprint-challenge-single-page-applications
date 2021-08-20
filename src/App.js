@@ -3,7 +3,7 @@ import { Route, Link, Switch } from 'react-router-dom'
 import Form from './Form'
 import Home from './Home'
 import Pizza from './Pizza'
-import PizzasList from './PizzasList'
+// import PizzasList from './PizzasList'
 import './App.css';
 import data from './data'
 
@@ -38,9 +38,9 @@ function App() {
         <Pizza pizzas={stock}/>
       </Route>
 
-      <Route path='/pizzas-list'>
+      {/* <Route path='/pizzas-list'>
         <PizzasList pizzas={stock}/>
-      </Route>
+      </Route> */}
 
       <Route path='/'>
         <Home />
