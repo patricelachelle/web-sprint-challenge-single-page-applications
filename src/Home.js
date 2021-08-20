@@ -57,7 +57,6 @@ export default function App() {
   );
 }
 
-
 function Home() {
     const history = useHistory()
     const routeToShop = () => {
