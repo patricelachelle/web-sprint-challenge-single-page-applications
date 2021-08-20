@@ -116,11 +116,11 @@ export default function Form() {
                  value={formState.size}
                  onChange={inputChange}
                  >
-                  <option value=''>--Choose One--</option>
-                  <option value='Personal'>Personal</option>
-                  <option value='Small'>Small</option>
-                  <option value='Medium'>Medium</option>
-                  <option value='Large'>Large</option>
+                  <option id='option' value=''>--Choose One--</option>
+                  <option id='option' value='Personal'>Personal</option>
+                  <option id='option' value='Small'>Small</option>
+                  <option id='option' value='Medium'>Medium</option>
+                  <option id='option' value='Large'>Large</option>
                  </select>
            </label>
            
@@ -184,7 +184,7 @@ export default function Form() {
                  Special
            </label>
            
-           <button data-cy='submit' id='order-button'  type='submit' disabled={buttonDisabled}>Submit</button>
+           <button data-cy='submit' id='order-pizza'  type='submit' disabled={buttonDisabled}>Submit</button>
 
            <pre>{JSON.stringify(post, null, 2)}</pre>
        </form>
