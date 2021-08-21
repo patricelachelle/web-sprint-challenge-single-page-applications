@@ -8,7 +8,6 @@ export default function Home() {
     console.log(history)
     history.push('pizzas-list')
   }
-
   return (
     <div className='home-wrapper'>
       <img
@@ -20,7 +19,7 @@ export default function Home() {
         id = 'order-pizza'
         onClick={routeToShop}
         className='md-button shop-button'
-      >Buy Now</button>
+      >Order Pizza</button>
     </div>
   )
 }

@@ -94,7 +94,7 @@ function Form() {
        <form id ='pizza-form' onSubmit={formSubmit}>
            {serverError && <p className='error'>{serverError}</p>}
            <label>
-               Name
+               <h4>Name</h4>
                 <input 
                 id='name-input' 
                 type='text' 
@@ -107,7 +107,7 @@ function Form() {
            </label>
            
            <label>
-               Size
+               <h4>Size</h4>
                 <select
                  id='size-dropdown'
                  name='size'
@@ -124,6 +124,7 @@ function Form() {
            </label>
            
            <label>
+           <h4>Toppings</h4>
                <input
                  type='checkbox'
                  id='pepperoni'
@@ -172,6 +173,7 @@ function Form() {
            </label>
 
            <label>
+           <h4>Special</h4>
                 <input 
                 id='special-text' 
                 type='text' 
@@ -179,12 +181,11 @@ function Form() {
                 data-cy='special-text'
                 value={formState.special}
                 onChange={inputChange}
-            />
-                 Special
+            />      
            </label>
-           
-           <button data-cy='submit' id='order-pizza'  type='submit' disabled={buttonDisabled}>Order Pizza</button>
-
+           <div>
+           <button data-cy='submit' id='order-button'  type='submit' disabled={buttonDisabled}>Add To Order</button>
+           </div>
            <pre>{JSON.stringify(post, null, 2)}</pre>
        </form>
    )

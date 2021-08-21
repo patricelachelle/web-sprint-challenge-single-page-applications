@@ -8,7 +8,7 @@ import './App.css';
 import data from './data'
 
 function fetchStock() {
-  
+  // fetchStock simulates getting data through axios.get(<URL>)
   return Promise.resolve({ success: true, data })
 }
 
@@ -22,15 +22,17 @@ function App() {
 
   return (
     <div className="App">
-      <nav>
+    <nav>
         <h1 className='store-header'>Lambda Eats</h1>
         <div className='nav-links'>
+          
           <Link to='/'>Home</Link>
           <Link to='/pizzas-list'>Pizza</Link>
         </div>
       </nav>
 
-    <Switch>
+    
+      <Switch>
 
       <Route path={'/pizzas-list/:pizzaID'}>
         <Pizza pizzas={stock}/>
@@ -43,12 +45,13 @@ function App() {
       <Route path='/'>
         <Home />
       </Route>
+
     
       <Route path='/pizza'>
         <Form />
       </Route>
          
-    </Switch>
+      </Switch>
      
     </div>
   );
